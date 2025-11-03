@@ -1,0 +1,41 @@
+# 🌍 ------------------------------------------------------------
+# 🧩  GIT ATTRIBUTES CONFIGURATION for SQL RFM Project
+# ---------------------------------------------------------------
+# This file defines how Git should handle different file types,
+# ensuring consistency in line endings, text encoding, and
+# GitHub language statistics.
+# ---------------------------------------------------------------
+
+# 🧮 Treat all SQL files as text with LF (Linux/Mac) line endings
+*.sql text eol=lf
+*.sql linguist-language=SQL   # Helps GitHub detect SQL as the main language
+
+# 📄 PDFs are binary files — no diff or merge attempts
+*.pdf binary
+
+# 📝 Markdown, text, and documentation files use LF line endings
+*.md text eol=lf
+*.txt text eol=lf
+LICENSE text eol=lf
+
+# ⚙️ Scripts (if added later) use LF line endings
+*.sh text eol=lf
+*.bat text eol=crlf
+
+# 🧰 Ignore unnecessary formatting differences for CSV/TSV data files
+*.csv text eol=lf
+*.tsv text eol=lf
+
+# 🎨 Image files — binary mode to avoid merge conflicts
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+
+# 🧾 Excel / Data files — binary mode
+*.xlsx binary
+*.xls binary
+
+# 🚀 Improve GitHub Linguist stats (optional, makes SQL primary)
+*.sql linguist-detectable=true
+docs/* linguist-vendored=false
